@@ -9,30 +9,27 @@ namespace MeteoSite.Controllers
     [Route("[controller]")]
     public class WeatherController : ControllerBase
     {
-        private readonly IConfiguration _configuration;
-        private readonly HttpClient _httpClient;
+        private readonly IConfiguration _config;
+        private readonly HttpClient _http;
 
-        public WeatherController(IConfiguration configuration)
+        public WeatherController(IConfiguration config)
         {
-            _configuration = configuration;
-            _httpClient = new HttpClient();
+            _config = config;
+            _http = new HttpClient();
         }
 
         [HttpGet("{lat}/{lon}")]
         public async Task<IActionResult> GetWeather(double lat, double lon)
         {
-            var apiKey = _configuration["OpenWeatherMap:ApiKey"];
+            var apiKey = _config["OpenWeatherMap:ApiKey"];
             var url = $"https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={apiKey}&units=metric&lang=fr";
 
-            var response = await _httpClient.GetAsync(url);
+            var resp = await _http.GetAsync(url);
+            if (!resp.IsSuccessStatusCode)
+                return StatusCode((int)resp.StatusCode, "Erreur appel API météo");
 
-            if (!response.IsSuccessStatusCode)
-            {
-                return StatusCode((int)response.StatusCode, "Erreur appel API météo");
-            }
-
-            var content = await response.Content.ReadAsStringAsync();
-            return Content(content, "application/json");
+            var json = await resp.Content.ReadAsStringAsync();
+            return Content(json, "application/json");
         }
     }
 }

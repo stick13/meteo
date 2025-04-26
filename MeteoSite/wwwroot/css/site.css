@@ -1,56 +1,63 @@
 html {
   font-size: 14px;
 }
-
 @media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+  html { font-size: 16px; }
 }
-
-html {
-  position: relative;
-  min-height: 100%;
-}
+html { position: relative; min-height: 100%; }
 
 body {
-  margin-bottom: 60px;
-  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
+  margin-bottom: 60px;
+  font-family: Arial, sans-serif;
   background: linear-gradient(to bottom, #cce0ff, #ffffff);
   text-align: center;
 }
 
-h1 {
+header h1 {
   padding: 20px;
-  margin: 0;
+  margin: 0 auto;
+  font-size: 2.5rem;
   color: #333;
+  text-align: center;
 }
 
 #map {
-  width: 90%;
+  width: 95%;
+  max-width: 1200px;
   height: 80vh;
   margin: 20px auto;
   border: 2px solid #333;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
+/* Styles utilitaires */
 .form-floating > .form-control-plaintext::placeholder,
 .form-floating > .form-control::placeholder {
   color: var(--bs-secondary-color);
   text-align: end;
 }
-
 .form-floating > .form-control-plaintext:focus::placeholder,
 .form-floating > .form-control:focus::placeholder {
   text-align: start;
 }
-
 .btn:focus, .btn:active:focus,
 .btn-link.nav-link:focus,
 .form-control:focus,
 .form-check-input:focus {
   box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+/* Footer fixe en bas du flow */
+footer {
+  margin: 20px auto;
+  padding: 10px 0;
+  width: 100%;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #555;
+  background: transparent;
+  box-shadow: none;
 }

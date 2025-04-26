@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "JgPoHMKxpckPOHkPhJ1wkkv8gC+kx7m2G9OB/8IhUWM=",
+  "Hash": "fgWOfac7+cDFIP8FGTVoS+M+iVfJNaGVcxhsd6WgqRw=",
   "Source": "MeteoSite",
   "BasePath": "_content/MeteoSite",
   "Mode": "Default",
@@ -1214,12 +1214,12 @@
       "OriginalItemSpec": "C:\\Users\\Samir\\Desktop\\Sité météo\\meteo\\MeteoSite\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
     },
     {
-      "Identity": "C:\\Users\\Samir\\Desktop\\Sité météo\\meteo\\MeteoSite\\obj\\Debug\\net9.0\\compressed\\x0t1opml38-3473kjr8xa.gz",
+      "Identity": "C:\\Users\\Samir\\Desktop\\Sité météo\\meteo\\MeteoSite\\obj\\Debug\\net9.0\\compressed\\x0t1opml38-7ni1j5er32.gz",
       "SourceId": "MeteoSite",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Samir\\Desktop\\Sité météo\\meteo\\MeteoSite\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/MeteoSite",
-      "RelativePath": "css/site#[.{fingerprint=3473kjr8xa}]?.css.gz",
+      "RelativePath": "css/site#[.{fingerprint=7ni1j5er32}]?.css.gz",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Alternative",
@@ -1228,8 +1228,8 @@
       "RelatedAsset": "C:\\Users\\Samir\\Desktop\\Sité météo\\meteo\\MeteoSite\\wwwroot\\css\\site.css",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "4dsg2kb07l",
-      "Integrity": "mLX0pjpTZ7QxU4VBCXFAUOIV/PpETafdhZAMbaYV0xM=",
+      "Fingerprint": "ocdoqcs5ue",
+      "Integrity": "mGOeUmr5DwZ7NP4Q+1ybf1dUoksvcizD+jIeTPlYbto=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\Samir\\Desktop\\Sité météo\\meteo\\MeteoSite\\wwwroot\\css\\site.css"
@@ -1417,8 +1417,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "3473kjr8xa",
-      "Integrity": "PUmB8EZKWAO1hsXQEGQOikaUw32FJs+V83I7fy6nqOk=",
+      "Fingerprint": "7ni1j5er32",
+      "Integrity": "XSQEgxaCp6jFKuLHrAeDar2+7A1s3/Ls/OwKf+v1tr0=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
@@ -2728,13 +2728,13 @@
   ],
   "Endpoints": [
     {
-      "Route": "css/site.3473kjr8xa.css",
-      "AssetFile": "C:\\Users\\Samir\\Desktop\\Sité météo\\meteo\\MeteoSite\\obj\\Debug\\net9.0\\compressed\\x0t1opml38-3473kjr8xa.gz",
+      "Route": "css/site.7ni1j5er32.css",
+      "AssetFile": "C:\\Users\\Samir\\Desktop\\Sité météo\\meteo\\MeteoSite\\obj\\Debug\\net9.0\\compressed\\x0t1opml38-7ni1j5er32.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.002100840336"
+          "Quality": "0.001669449082"
         }
       ],
       "ResponseHeaders": [
@@ -2744,15 +2744,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "475"
+          "Value": "598"
         },
         {
           "Name": "ETag",
-          "Value": "\"mLX0pjpTZ7QxU4VBCXFAUOIV/PpETafdhZAMbaYV0xM=\""
+          "Value": "\"mGOeUmr5DwZ7NP4Q+1ybf1dUoksvcizD+jIeTPlYbto=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 26 Apr 2025 13:53:02 GMT"
+          "Value": "Sat, 26 Apr 2025 14:12:13 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2772,13 +2772,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"PUmB8EZKWAO1hsXQEGQOikaUw32FJs+V83I7fy6nqOk=\""
+          "Value": "W/\"XSQEgxaCp6jFKuLHrAeDar2+7A1s3/Ls/OwKf+v1tr0=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "3473kjr8xa"
+          "Value": "7ni1j5er32"
         },
         {
           "Name": "label",
@@ -2786,12 +2786,12 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-PUmB8EZKWAO1hsXQEGQOikaUw32FJs+V83I7fy6nqOk="
+          "Value": "sha256-XSQEgxaCp6jFKuLHrAeDar2+7A1s3/Ls/OwKf+v1tr0="
         }
       ]
     },
     {
-      "Route": "css/site.3473kjr8xa.css",
+      "Route": "css/site.7ni1j5er32.css",
       "AssetFile": "C:\\Users\\Samir\\Desktop\\Sité météo\\meteo\\MeteoSite\\wwwroot\\css\\site.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -2801,7 +2801,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1041"
+          "Value": "1341"
         },
         {
           "Name": "Content-Type",
@@ -2809,11 +2809,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"PUmB8EZKWAO1hsXQEGQOikaUw32FJs+V83I7fy6nqOk=\""
+          "Value": "\"XSQEgxaCp6jFKuLHrAeDar2+7A1s3/Ls/OwKf+v1tr0=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 26 Apr 2025 13:53:02 GMT"
+          "Value": "Sat, 26 Apr 2025 14:12:13 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2823,7 +2823,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "3473kjr8xa"
+          "Value": "7ni1j5er32"
         },
         {
           "Name": "label",
@@ -2831,13 +2831,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-PUmB8EZKWAO1hsXQEGQOikaUw32FJs+V83I7fy6nqOk="
+          "Value": "sha256-XSQEgxaCp6jFKuLHrAeDar2+7A1s3/Ls/OwKf+v1tr0="
         }
       ]
     },
     {
-      "Route": "css/site.3473kjr8xa.css.gz",
-      "AssetFile": "C:\\Users\\Samir\\Desktop\\Sité météo\\meteo\\MeteoSite\\obj\\Debug\\net9.0\\compressed\\x0t1opml38-3473kjr8xa.gz",
+      "Route": "css/site.7ni1j5er32.css.gz",
+      "AssetFile": "C:\\Users\\Samir\\Desktop\\Sité météo\\meteo\\MeteoSite\\obj\\Debug\\net9.0\\compressed\\x0t1opml38-7ni1j5er32.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2846,7 +2846,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "475"
+          "Value": "598"
         },
         {
           "Name": "Content-Type",
@@ -2854,11 +2854,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"mLX0pjpTZ7QxU4VBCXFAUOIV/PpETafdhZAMbaYV0xM=\""
+          "Value": "\"mGOeUmr5DwZ7NP4Q+1ybf1dUoksvcizD+jIeTPlYbto=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 26 Apr 2025 13:53:02 GMT"
+          "Value": "Sat, 26 Apr 2025 14:12:13 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2876,7 +2876,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "3473kjr8xa"
+          "Value": "7ni1j5er32"
         },
         {
           "Name": "label",
@@ -2884,18 +2884,18 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-mLX0pjpTZ7QxU4VBCXFAUOIV/PpETafdhZAMbaYV0xM="
+          "Value": "sha256-mGOeUmr5DwZ7NP4Q+1ybf1dUoksvcizD+jIeTPlYbto="
         }
       ]
     },
     {
       "Route": "css/site.css",
-      "AssetFile": "C:\\Users\\Samir\\Desktop\\Sité météo\\meteo\\MeteoSite\\obj\\Debug\\net9.0\\compressed\\x0t1opml38-3473kjr8xa.gz",
+      "AssetFile": "C:\\Users\\Samir\\Desktop\\Sité météo\\meteo\\MeteoSite\\obj\\Debug\\net9.0\\compressed\\x0t1opml38-7ni1j5er32.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.002100840336"
+          "Quality": "0.001669449082"
         }
       ],
       "ResponseHeaders": [
@@ -2905,15 +2905,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "475"
+          "Value": "598"
         },
         {
           "Name": "ETag",
-          "Value": "\"mLX0pjpTZ7QxU4VBCXFAUOIV/PpETafdhZAMbaYV0xM=\""
+          "Value": "\"mGOeUmr5DwZ7NP4Q+1ybf1dUoksvcizD+jIeTPlYbto=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 26 Apr 2025 13:53:02 GMT"
+          "Value": "Sat, 26 Apr 2025 14:12:13 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2933,13 +2933,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"PUmB8EZKWAO1hsXQEGQOikaUw32FJs+V83I7fy6nqOk=\""
+          "Value": "W/\"XSQEgxaCp6jFKuLHrAeDar2+7A1s3/Ls/OwKf+v1tr0=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-PUmB8EZKWAO1hsXQEGQOikaUw32FJs+V83I7fy6nqOk="
+          "Value": "sha256-XSQEgxaCp6jFKuLHrAeDar2+7A1s3/Ls/OwKf+v1tr0="
         }
       ]
     },
@@ -2954,7 +2954,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1041"
+          "Value": "1341"
         },
         {
           "Name": "Content-Type",
@@ -2962,11 +2962,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"PUmB8EZKWAO1hsXQEGQOikaUw32FJs+V83I7fy6nqOk=\""
+          "Value": "\"XSQEgxaCp6jFKuLHrAeDar2+7A1s3/Ls/OwKf+v1tr0=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 26 Apr 2025 13:53:02 GMT"
+          "Value": "Sat, 26 Apr 2025 14:12:13 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2976,13 +2976,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-PUmB8EZKWAO1hsXQEGQOikaUw32FJs+V83I7fy6nqOk="
+          "Value": "sha256-XSQEgxaCp6jFKuLHrAeDar2+7A1s3/Ls/OwKf+v1tr0="
         }
       ]
     },
     {
       "Route": "css/site.css.gz",
-      "AssetFile": "C:\\Users\\Samir\\Desktop\\Sité météo\\meteo\\MeteoSite\\obj\\Debug\\net9.0\\compressed\\x0t1opml38-3473kjr8xa.gz",
+      "AssetFile": "C:\\Users\\Samir\\Desktop\\Sité météo\\meteo\\MeteoSite\\obj\\Debug\\net9.0\\compressed\\x0t1opml38-7ni1j5er32.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2991,7 +2991,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "475"
+          "Value": "598"
         },
         {
           "Name": "Content-Type",
@@ -2999,11 +2999,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"mLX0pjpTZ7QxU4VBCXFAUOIV/PpETafdhZAMbaYV0xM=\""
+          "Value": "\"mGOeUmr5DwZ7NP4Q+1ybf1dUoksvcizD+jIeTPlYbto=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 26 Apr 2025 13:53:02 GMT"
+          "Value": "Sat, 26 Apr 2025 14:12:13 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3021,7 +3021,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-mLX0pjpTZ7QxU4VBCXFAUOIV/PpETafdhZAMbaYV0xM="
+          "Value": "sha256-mGOeUmr5DwZ7NP4Q+1ybf1dUoksvcizD+jIeTPlYbto="
         }
       ]
     },

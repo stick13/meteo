@@ -1,65 +1,111 @@
 ﻿@{
+    Layout = "_Layout";
     ViewData["Title"] = "Météo en France";
 }
 
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="utf-8" />
-    <title>@ViewData["Title"]</title>
+<div id="map"></div>
 
-    <!-- Feuille de style externe -->
-    <link rel="stylesheet" href="~/css/site.css" />
+@section Scripts {
+<script>
+    // Initialisation de la carte centrée sur la France
+    var map = L.map('map').setView([46.6034, 1.8883], 6);
 
-    <!-- Leaflet CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    // Couches OpenStreetMap
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '© OpenStreetMap contributors'
+    }).addTo(map);
 
-    <!-- Leaflet JS -->
-    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-</head>
-<body>
+    // Fonction pour ajouter un circleMarker coloré
+    function addWeatherMarker(lat, lon, nom, temp, desc, icon) {
+        let fillColor;
+        if (temp >= 30)      fillColor = 'red';
+        else if (temp <= 5)  fillColor = 'blue';
+        else                 fillColor = 'green';
 
-    <h1>Météo en direct 🇫🇷</h1>
+        const iconUrl = `https://openweathermap.org/img/wn/${icon}.png`;
 
-    <div id="map"></div>
+        L.circleMarker([lat, lon], {
+            radius: 8,
+            fillColor: fillColor,
+            color: '#000',
+            weight: 1,
+            opacity: 1,
+            fillOpacity: 0.8
+        })
+        .addTo(map)
+        .bindPopup(`
+            <b>${nom}</b><br/>
+            <img src="${iconUrl}" alt="${desc}" /><br/>
+            ${temp}°C — ${desc}
+        `);
+    }
 
-    <script>
-        var map = L.map('map').setView([46.6034, 1.8883], 6);
+    // 1) Essayer de géolocaliser l'utilisateur
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(position => {
+            const latU = position.coords.latitude;
+            const lonU = position.coords.longitude;
 
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '© OpenStreetMap contributors'
-        }).addTo(map);
+            // Centrer sur l'utilisateur
+            map.setView([latU, lonU], 10);
 
+            // Appeler notre API pour la météo locale
+            fetch(`/weather/${latU}/${lonU}`)
+                .then(r => r.json())
+                .then(data => {
+                    addWeatherMarker(
+                        latU, lonU,
+                        "Vous êtes ici",
+                        data.main.temp,
+                        data.weather[0].description,
+                        data.weather[0].icon
+                    );
+                    // Puis afficher les autres villes
+                    showOtherCities();
+                })
+                .catch(err => {
+                    console.error("Impossible de récupérer ta météo", err);
+                    showOtherCities();
+                });
+        }, error => {
+            console.warn("Géolocalisation refusée ou indisponible", error);
+            // On passe directement aux villes
+            showOtherCities();
+        });
+    } else {
+        console.warn("Géolocalisation non supportée");
+        showOtherCities();
+    }
+
+    // 2) Afficher les villes prédéfinies
+    function showOtherCities() {
         const villes = [
-            { nom: "Paris", lat: 48.8566, lon: 2.3522 },
-            { nom: "Marseille", lat: 43.2965, lon: 5.3698 },
-            { nom: "Lyon", lat: 45.7640, lon: 4.8357 },
-            { nom: "Bordeaux", lat: 44.8378, lon: -0.5792 },
-            { nom: "Lille", lat: 50.6292, lon: 3.0573 },
-            { nom: "Grenoble", lat: 45.166672, lon: 5.71667 }
+            { nom: "Paris",        lat: 48.8566,   lon: 2.3522  },
+            { nom: "Marseille",    lat: 43.2965,   lon: 5.3698  },
+            { nom: "Lyon",         lat: 45.7640,   lon: 4.8357  },
+            { nom: "Bordeaux",     lat: 44.8378,   lon: -0.5792 },
+            { nom: "Lille",        lat: 50.6292,   lon: 3.0573  },
+            { nom: "Grenoble",     lat: 45.166672, lon: 5.71667 },
+            { nom: "Créteil",      lat: 48.783329, lon: 2.46667 },
+            { nom: "Tamanrasset",  lat: 22.785,    lon: 5.5228  },
+            { nom: "Tromsø",       lat: 69.6492,   lon: 18.9553 },
+            { nom: "Ranchette",    lat: 46.3551,   lon: 5.8063  }
         ];
 
         villes.forEach(ville => {
             fetch(`/weather/${ville.lat}/${ville.lon}`)
-                .then(response => response.json())
+                .then(resp => resp.json())
                 .then(data => {
-                    const temperature = data.main.temp;
-                    const description = data.weather[0].description;
-                    const icon = data.weather[0].icon;
-                    const iconUrl = `https://openweathermap.org/img/wn/${icon}.png`;
-
-                    L.marker([ville.lat, ville.lon]).addTo(map)
-                        .bindPopup(`
-                            <b>${ville.nom}</b><br>
-                            <img src="${iconUrl}" alt="${description}" /><br>
-                            ${temperature}°C - ${description}
-                        `);
+                    addWeatherMarker(
+                        ville.lat, ville.lon,
+                        ville.nom,
+                        data.main.temp,
+                        data.weather[0].description,
+                        data.weather[0].icon
+                    );
                 })
-                .catch(error => {
-                    console.error('Erreur météo pour', ville.nom, error);
-                });
+                .catch(err => console.error('Météo impossible pour', ville.nom, err));
         });
-    </script>
-
-</body>
-</html>
+    }
+</script>
+}

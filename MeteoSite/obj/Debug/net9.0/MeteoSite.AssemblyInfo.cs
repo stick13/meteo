@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MeteoSite")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f490d18cf46c00a4bac82456ec7cc6083d590ee8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+16260f55b27575091f571343a981e5026ee61070")]
 [assembly: System.Reflection.AssemblyProductAttribute("MeteoSite")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MeteoSite")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

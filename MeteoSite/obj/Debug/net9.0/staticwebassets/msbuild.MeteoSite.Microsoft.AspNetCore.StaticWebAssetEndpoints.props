@@ -1,16 +1,16 @@
 ﻿<Project>
   <ItemGroup>
-    <StaticWebAssetEndpoint Include="_content/MeteoSite/css/site.3473kjr8xa.css">
+    <StaticWebAssetEndpoint Include="_content/MeteoSite/css/site.7ni1j5er32.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\site.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"3473kjr8xa"},{"Name":"integrity","Value":"sha256-PUmB8EZKWAO1hsXQEGQOikaUw32FJs\u002BV83I7fy6nqOk="},{"Name":"label","Value":"_content/MeteoSite/css/site.css"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1041"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022PUmB8EZKWAO1hsXQEGQOikaUw32FJs\u002BV83I7fy6nqOk=\u0022"},{"Name":"Last-Modified","Value":"Sat, 26 Apr 2025 13:53:02 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"7ni1j5er32"},{"Name":"integrity","Value":"sha256-XSQEgxaCp6jFKuLHrAeDar2\u002B7A1s3/Ls/OwKf\u002Bv1tr0="},{"Name":"label","Value":"_content/MeteoSite/css/site.css"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1341"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022XSQEgxaCp6jFKuLHrAeDar2\u002B7A1s3/Ls/OwKf\u002Bv1tr0=\u0022"},{"Name":"Last-Modified","Value":"Sat, 26 Apr 2025 14:12:13 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/MeteoSite/css/site.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\site.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-PUmB8EZKWAO1hsXQEGQOikaUw32FJs\u002BV83I7fy6nqOk="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"1041"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022PUmB8EZKWAO1hsXQEGQOikaUw32FJs\u002BV83I7fy6nqOk=\u0022"},{"Name":"Last-Modified","Value":"Sat, 26 Apr 2025 13:53:02 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-XSQEgxaCp6jFKuLHrAeDar2\u002B7A1s3/Ls/OwKf\u002Bv1tr0="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"1341"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022XSQEgxaCp6jFKuLHrAeDar2\u002B7A1s3/Ls/OwKf\u002Bv1tr0=\u0022"},{"Name":"Last-Modified","Value":"Sat, 26 Apr 2025 14:12:13 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/MeteoSite/favicon.61n19gt1b8.ico">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\favicon.ico'))</AssetFile>
