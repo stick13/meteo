@@ -1,8 +1,65 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Météo en France";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewData["Title"]</title>
+
+    <!-- Feuille de style externe -->
+    <link rel="stylesheet" href="~/css/site.css" />
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+</head>
+<body>
+
+    <h1>Météo en direct 🇫🇷</h1>
+
+    <div id="map"></div>
+
+    <script>
+        var map = L.map('map').setView([46.6034, 1.8883], 6);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '© OpenStreetMap contributors'
+        }).addTo(map);
+
+        const villes = [
+            { nom: "Paris", lat: 48.8566, lon: 2.3522 },
+            { nom: "Marseille", lat: 43.2965, lon: 5.3698 },
+            { nom: "Lyon", lat: 45.7640, lon: 4.8357 },
+            { nom: "Bordeaux", lat: 44.8378, lon: -0.5792 },
+            { nom: "Lille", lat: 50.6292, lon: 3.0573 },
+            { nom: "Grenoble", lat: 45.166672, lon: 5.71667 }
+        ];
+
+        villes.forEach(ville => {
+            fetch(`/weather/${ville.lat}/${ville.lon}`)
+                .then(response => response.json())
+                .then(data => {
+                    const temperature = data.main.temp;
+                    const description = data.weather[0].description;
+                    const icon = data.weather[0].icon;
+                    const iconUrl = `https://openweathermap.org/img/wn/${icon}.png`;
+
+                    L.marker([ville.lat, ville.lon]).addTo(map)
+                        .bindPopup(`
+                            <b>${ville.nom}</b><br>
+                            <img src="${iconUrl}" alt="${description}" /><br>
+                            ${temperature}°C - ${description}
+                        `);
+                })
+                .catch(error => {
+                    console.error('Erreur météo pour', ville.nom, error);
+                });
+        });
+    </script>
+
+</body>
+</html>
