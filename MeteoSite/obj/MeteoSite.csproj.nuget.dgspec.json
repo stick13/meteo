@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Samir\\Desktop\\Sité météo\\meteo\\MeteoSite\\MeteoSite.csproj": {}
+    "C:\\Users\\Samir\\Desktop\\meteo\\meteo\\MeteoSite\\MeteoSite.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Samir\\Desktop\\Sité météo\\meteo\\MeteoSite\\MeteoSite.csproj": {
+    "C:\\Users\\Samir\\Desktop\\meteo\\meteo\\MeteoSite\\MeteoSite.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Samir\\Desktop\\Sité météo\\meteo\\MeteoSite\\MeteoSite.csproj",
+        "projectUniqueName": "C:\\Users\\Samir\\Desktop\\meteo\\meteo\\MeteoSite\\MeteoSite.csproj",
         "projectName": "MeteoSite",
-        "projectPath": "C:\\Users\\Samir\\Desktop\\Sité météo\\meteo\\MeteoSite\\MeteoSite.csproj",
+        "projectPath": "C:\\Users\\Samir\\Desktop\\meteo\\meteo\\MeteoSite\\MeteoSite.csproj",
         "packagesPath": "C:\\Users\\Samir\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Samir\\Desktop\\Sité météo\\meteo\\MeteoSite\\obj\\",
+        "outputPath": "C:\\Users\\Samir\\Desktop\\meteo\\meteo\\MeteoSite\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Samir\\AppData\\Roaming\\NuGet\\NuGet.Config",
